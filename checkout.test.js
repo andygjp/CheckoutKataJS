@@ -23,6 +23,16 @@ test("scanning in A and B should come to 80", () => {
     expect(total).toBe(80);
 });
 
+test("scanning one of each item should come to 115", () => {
+    const checkout = createCheckout();
+    checkout.scan("A");
+    checkout.scan("B");
+    checkout.scan("C");
+    checkout.scan("D");
+    const total = checkout.total();
+    expect(total).toBe(115);
+});
+
 function createCheckout() {
     const items = [
         new Item("A", new Price(50)),
