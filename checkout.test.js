@@ -1,3 +1,5 @@
+"use strict";
+
 import { Item, Price, Checkout } from "./checkout";
 
 test("scanning in one A should come to 50", () => {
