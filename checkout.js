@@ -5,25 +5,36 @@ export class Item {
         this.name = name;
         this.price = price;
     }
+
+    getCost() {
+        return this.price.getCost();
+    }
 }
 
 export class Price {
     constructor (cost) {
         this.cost = cost;
     }
+
+    getCost() {
+        return this.cost;
+    }
 }
 
 export class Checkout {
     constructor (items) {
-        this.count = 0;
+        this.scannedItems = [];
+        /** @type {Array<Item>} */
         this.items = items;
     }
 
     scan(item) {
-        this.count++;
+        this.scannedItems.push(item);
     }
 
     total() {
-        return this.count * 50;
+        return this.scannedItems
+            .map(item => this.items.find(x => x.name === item).getCost())
+            .reduce((subTotal, cost) => subTotal + cost, 0);
     }
 }

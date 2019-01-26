@@ -15,6 +15,14 @@ test("scanning in one A should come to 50", () => {
     expect(total).toBe(50);
 });
 
+test("scanning in A and B should come to 80", () => {
+    const checkout = createCheckout();
+    checkout.scan("A");
+    checkout.scan("B");
+    const total = checkout.total();
+    expect(total).toBe(80);
+});
+
 function createCheckout() {
     const items = [
         new Item("A", new Price(50)),
