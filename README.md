@@ -2,9 +2,17 @@
 
 [Checkout Kata](http://codekata.com/kata/kata09-back-to-the-checkout/)
 
+# Tests
+
+`> npm test` to run the tests.
+
+`> npm test -- --watch` to run tests in watch mode.
+
 # Checkout
 
-## CRC cards
+## Design
+
+Proposed design using [CRC cards](http://www.extremeprogramming.org/example/crcsim.html)
 
 Candidate        | _
 -----------------|--------------
