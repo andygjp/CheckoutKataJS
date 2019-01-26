@@ -2,10 +2,16 @@
 
 import { Item, Price, Checkout } from "./checkout";
 
+test("without scanning in items, the total should come to 0", () => {
+    const checkout = createCheckout();
+    const total = checkout.total();
+    expect(total).toBe(0);
+});
+
 test("scanning in one A should come to 50", () => {
-    let checkout = createCheckout();
+    const checkout = createCheckout();
     checkout.scan("A");
-    let total = checkout.total();
+    const total = checkout.total();
     expect(total).toBe(50);
 });
 

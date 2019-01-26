@@ -15,14 +15,15 @@ export class Price {
 
 export class Checkout {
     constructor (items) {
+        this.count = 0;
         this.items = items;
     }
 
     scan(item) {
-
+        this.count++;
     }
 
     total() {
-        return 50;
+        return this.count * 50;
     }
 }
