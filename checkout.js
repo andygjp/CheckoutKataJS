@@ -15,4 +15,12 @@ export class Checkout {
     constructor (items) {
         this.items = items;
     }
+
+    scan(item) {
+
+    }
+
+    total() {
+        return 50;
+    }
 }
