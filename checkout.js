@@ -24,7 +24,7 @@ export class Price {
 export class Checkout {
     constructor (items) {
         this.scannedItems = [];
-        /** @type {Array<Item>} */
+        /** @type {Item[]} */
         this.items = items;
     }
 
