@@ -3,6 +3,7 @@
 export class Item {
     constructor (name, price) {
         this.name = name;
+        /** @type {Price} */
         this.price = price;
     }
 

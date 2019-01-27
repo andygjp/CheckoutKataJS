@@ -24,6 +24,17 @@ describe("scanning in different items", () => {
     });
 });
 
+describe("scanning in multiples of the same item", () => {
+
+    test("scanning in two A items comes to 100", () =>{
+        const checkout = createCheckout();
+        checkout.scan("A");
+        checkout.scan("A");
+        const total = checkout.total();
+        expect(total).toBe(100);
+    })
+});
+
 function createCheckout() {
     const items = [
         new Item("A", new Price(50)),
