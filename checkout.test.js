@@ -12,7 +12,7 @@ describe("scanning in different items", () => {
         {input: ["A", "B", "C", "D"], expected: 115}
     ];
   
-    theoretically("scanning in items should come to", theories, x => {
+    theoretically("scanning in items should come to expected total", theories, x => {
         /** @type {{input:string[], expected:number}} */ 
         const theory = x;
         const checkout = createCheckout();
